@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.baek.exampleandroid">
+
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <!-- 권한 등록 API 23이상부터는 위험권한은 별도 작업이 필요함 -->
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SecondActivity" />
+        <activity android:name=".DataActivity"
+            android:label="데이터전달"
+            android:theme="@style/Theme.AppCompat.Dialog"/>
+        <!-- 테마나 타이틀을 바꾸는 방법 -->
+        <activity android:name=".MyConstraintActivity" />
+    </application>
+
+</manifest>
