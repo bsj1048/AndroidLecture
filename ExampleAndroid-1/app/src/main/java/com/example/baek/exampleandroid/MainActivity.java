@@ -12,11 +12,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -35,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
     View subView;
 
     int index = 1;
-
 
 
     @Override
@@ -67,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 LinearLayout container = (LinearLayout) findViewById(R.id.main_layout);
                 LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                inflater.inflate(R.layout.activity_relative, container , true);
+                inflater.inflate(R.layout.activity_relative, container, true);
             }
         });
 
@@ -79,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 LinearLayout container = (LinearLayout) findViewById(R.id.main_layout);
                 LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                inflater.inflate(R.layout.activity_table, container , true);
+                inflater.inflate(R.layout.activity_table, container, true);
             }
         });
 
@@ -89,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 LinearLayout container = (LinearLayout) findViewById(R.id.main_layout);
                 LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                subView = (View) inflater.inflate(R.layout.activity_text, container , true);
+                subView = (View) inflater.inflate(R.layout.activity_text, container, true);
 
 
                 background0 = (TextView) findViewById(R.id.image0);
@@ -105,11 +103,11 @@ public class MainActivity extends AppCompatActivity {
                         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(intent);
                         /*
-                        *
-                        *
-                        * inflation 된 레이아웃을 전화면으로 돌리는 방법은 없는건가? intent로 화면전환하는 것과는 전혀 다른 차원의 문제??!!
-                        *
-                        *
+                         *
+                         *
+                         * inflation 된 레이아웃을 전화면으로 돌리는 방법은 없는건가? intent로 화면전환하는 것과는 전혀 다른 차원의 문제??!!
+                         *
+                         *
                          */
                     }
                 });
@@ -118,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
                 button7.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        switch(index){
+                        switch (index) {
                             case 0:
                                 background1.setVisibility(View.INVISIBLE);
                                 background0.setVisibility(View.VISIBLE);
@@ -131,14 +129,14 @@ public class MainActivity extends AppCompatActivity {
                                 button7.setText("그린");
                                 index = 0;
                                 break;
-                                default:
+                            default:
                         }
                     }
                 });
                 /**
                  *
                  *
-                // inflation한 sublayout을 .java를 따로 만들어 변수를 참조할 수 있다면 따로 분리시켜서 만들어보자!
+                 // inflation한 sublayout을 .java를 따로 만들어 변수를 참조할 수 있다면 따로 분리시켜서 만들어보자!
                  * 또 분리 시켰다면 중복되는 id를 이용할 수 있는지 예를 들면 여기서의 button7 -> button1
                  *
                  *
@@ -165,7 +163,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void onButton1Clicked(View v){
+    public void onButton1Clicked(View v) {
         Toast.makeText(getApplicationContext(), "클릭 함수 직접 구현", Toast.LENGTH_LONG).show();
 //        Toast.makeText(this, "클릭 함수 직접 구현", Toast.LENGTH_LONG).show();
     }
