@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(DialogInterface dialog, int which) {
 
                 LayoutInflater inflater = getLayoutInflater();
-                View layout = inflater.inflate(R.layout.toastborder, (ViewGroup) findViewById(R.id.toast_layout_root));
+                View layout = inflater.inflate(R.layout.toastborder, (ViewGroup) findViewById(R.id.toast_layout_root)); // toastborder.xml 파일을 id가 toast_layout_root인 레이아웃(toast화면이 될 레이아웃)에 보여준다
 
                 TextView text = (TextView) layout.findViewById(R.id.text);
                 text.setText("설정을 반영하지 않았습니다");
